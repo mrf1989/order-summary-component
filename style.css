@@ -22,10 +22,10 @@ body {
 body {
   align-items: center;
   background: var(--pale-blue);
-  background-image: url(./images/pattern-background-mobile.svg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100%;
+  color: var(--dark-blue);
   display: flex;
   font-family: "Red Hat Display";
   font-size: 16px;
@@ -36,8 +36,8 @@ body {
 .card {
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 1px 1px 30px .5px var(--desaturated-blue);
-  max-width: 375px;
+  box-shadow: 0px 15px 20px -10px var(--desaturated-blue);
+  max-width: 360px;
 }
 
 .card-image {
@@ -46,6 +46,95 @@ body {
 }
 
 .card-body {
+  align-items: center;
   display: flex;
   flex-direction: column;
+  padding: .5rem 2rem 1.5rem 2rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.card-content {
+  color: var(--desaturated-blue);
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
+}
+
+.subcard {
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  border-radius: .8rem;
+  display: flex;
+  font-size: .9rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.subcard-content {
+  margin-right: 2rem;
+}
+
+.subcard-content--secondary {
+  color: var(--desaturated-blue);
+}
+
+.subcard-btn:hover {
+  color: var(--bright-blue);
+  opacity: .8;
+  text-decoration: none;
+}
+
+.card-btn--main {
+  background-color: var(--bright-blue);
+  border: 0;
+  border-radius: .8rem;
+  box-shadow: 0px 10px 30px -10px var(--desaturated-blue);
+  color: var(--very-pale-blue);
+  cursor: pointer;
+  font-family: "Red Hat Display";
+  font-size: .95rem;
+  font-weight: 700;
+  padding: 1rem;
+  transition: all .5s ease-in-out;
+  width: 100%;
+}
+
+.card-btn--main:hover {
+  opacity: .8;
+  transition: all .5s ease-in-out;
+}
+
+.card-btn--secondary {
+  color: var(--desaturated-blue);
+  font-size: .95rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+.card-btn--secondary:hover {
+  color: var(--dark-blue);
+}
+
+@media screen and (max-width: 499px) {
+  body {
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    background-image: url(./images/pattern-background-desktop.svg);
+  }
+
+  .card {
+    max-width: 380px;
+  }
 }
