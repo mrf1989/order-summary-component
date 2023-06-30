@@ -135,6 +135,14 @@ body {
   }
 
   .card {
-    max-width: 380px;
+    max-width: 420px;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .card-body {
+    padding-bottom: 2.5rem;
   }
 }
